@@ -1,9 +1,11 @@
+News API => Token => 2abe2eadfbce45bc9044dbbdbd05e5b9
+
 /*------------------------------------*/
 
 8/11/2020
 
 tareas:
-[] Reescribir la url de la app
+---------
 
 Hechas:
 [ x ] mostrar pantalla de carga antes de la obtencion de los datos por Http
@@ -16,5 +18,24 @@ Hechas:
 [ x ] diseñar el componente "Dolar-today"
 [ x ] Obtener valores de select de forma reactiva
 [ x ] implementar componente "Bank"
+
+/*------------------------------------*/
+
+9/11/2020
+
+tareas:
+[] Probar NEWS API
+[] Ver sobre "Service"
+[] Mostrar y ocultar el navbar lateral con el boton hamburguesa
+[] Crear vista "About"
+[] Crear vista feedback
+[] Crear Api para feedback con Java y Jersey
+[] Montar la Api feedback en un servidor
+[] Reescribir la url de la app
+[] Ver de colocar un grafico historico en el componente "riesgo pais"
+
+Hechas:
+[ x ] Diseñar la vista riesgo pais 
+[ x ] implementar riesgo pais
 
 /*------------------------------------*/

@@ -16,7 +16,10 @@ import { LoaderComponent } from './loader/loader.component';
 import { LoadingService } from "./services/loading-service.service";
 
 import { LoaderInterceptor } from "./interceptors/loader.interceptor";
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; 
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CountryRiskComponent } from './country-risk/country-risk.component';
+import { NewsComponent } from './news/news.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LatNavbarComponent,
     DolarTodayComponent,
     BankComponent, 
-    LoaderComponent, PageNotFoundComponent
+    LoaderComponent, PageNotFoundComponent, CountryRiskComponent, NewsComponent
   ],
   imports: [
     BrowserModule,

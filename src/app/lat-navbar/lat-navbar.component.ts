@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lat-navbar',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LatNavbarComponent implements OnInit {
 
   constructor() { }
+
+  @Input("clicked") event : any;
 
   ngOnInit(): void {
   }

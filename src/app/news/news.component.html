@@ -1,0 +1,20 @@
+<div class="news-section">
+    <div class="news-title">
+        <div class="title">
+            <h3> <i class="fa fa-globe"></i> Ultimas noticias sobre negocios</h3>
+        </div>
+    </div>
+
+    <div class="news-table">
+        <div class="card" *ngFor="let news of newsResponse">
+            <img src="{{ news.getImgUrl() }}" alt="">
+            <div class="card-body">
+                <span class="card-text"> {{ news.getAuthor() }} | {{ news.getPublishedAt() }}</span>
+                <hr>
+                <h6 class="card-title"> {{ news.getTitle() }} </h6>
+                <a href="{{ news.getRedirectUrl() }}" target="__blank" class="btn btn-info">Ver mas</a>
+            </div>
+        </div>
+    </div>
+
+</div>

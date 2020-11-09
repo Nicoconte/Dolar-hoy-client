@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { LoadingService } from "../services/loading-service.service";
+
 
 export class Dolar{
     private type : String;
@@ -8,7 +8,6 @@ export class Dolar{
     private lastUpdate : String;
 
     private http : HttpClient;
-    private service : LoadingService;
 
     constructor(http : HttpClient, type : String="") {
         this.type = type;

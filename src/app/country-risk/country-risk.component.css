@@ -1,0 +1,29 @@
+.country-risk-section {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.risk{
+    width:70%;
+    height:50%;
+    background-color: #ec4675;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom:120px;
+    color:white;
+}
+
+.risk h3, span {
+    margin-left : 50px;
+}
+
+.risk h3{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
