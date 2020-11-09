@@ -1,0 +1,8 @@
+{
+    "/api/" : {
+        "target" : "https://api-dolar-argentina.herokuapp.com",
+        "logLevel" : "debug",
+        "changeOrigin" : true,
+        "secure" : true 
+    }
+}

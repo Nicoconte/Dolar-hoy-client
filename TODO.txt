@@ -1,0 +1,20 @@
+/*------------------------------------*/
+
+8/11/2020
+
+tareas:
+[] Reescribir la url de la app
+
+Hechas:
+[ x ] mostrar pantalla de carga antes de la obtencion de los datos por Http
+[ x ] crear e implementar pantalla de carga
+[ x ] Comenzar a modelar el componente "Dolar-today" 
+[ x ] implementar el componente "Dolar-today"
+[ x ] Diseñar el componente "Bank"
+[ x ] Arreglar vistas
+[ x ] Añadir el modulo routing
+[ x ] diseñar el componente "Dolar-today"
+[ x ] Obtener valores de select de forma reactiva
+[ x ] implementar componente "Bank"
+
+/*------------------------------------*/

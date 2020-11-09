@@ -62,7 +62,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Cotizador:build"
+            "browserTarget": "Cotizador:build",
           },
           "configurations": {
             "production": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Cotizador"
+    }
+  },
+  "defaultProject": "Cotizador",
+  "cli": {
+    "analytics": false
+  }
 }

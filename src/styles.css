@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    width:100%;
+    height:auto;
+}
+
+/* Styles for Dollar values presentation*/
+
+.dolar-name{
+    width:100%;
+    height:20%;
+    background-color: #69b9ab;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.dolar-pricing {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.dolar-name h5 {
+    font-weight: 600;
+    color:whitesmoke;
+    margin-left:15px;
+}
+
+.last-update {
+    width:100%;
+    height:20%;
+    background-color: #d4b478;
+}
+
+.buy, .sell {
+    width: 100%;
+    height: 35%;
+}
+
+.buy span, .sell span, .last-update span {
+    margin-left: 20px;
+    font-size:17px;
+}
+
+.buy, .sell, .last-update {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color:white;
+}
+
+.buy {
+    background-color: #6ba4c4;
+}
+
+.sell {
+    background-color: #8397cf;
+}
