@@ -6,7 +6,7 @@
             </div>
             <form [formGroup]="bankForm" class="filter-select">
                 <select class="form-control" name="bank" formControlName="name" (ngModelChange)="onChange($event)">
-                    <option [ngValue]="null" [disabled]="true"> Seleccione un banco </option> 
+                    <option [ngValue]="selectMessage" [disabled]="true"> Seleccione un banco </option> 
                     <option *ngFor="let bank of banks" [value]="bank"> {{bank}} </option>
                 </select>
             </form>
@@ -15,7 +15,7 @@
     <div class="bank-pricing">
         <div class="dolar-values">
             <div class="dolar-name">
-                <h5>Dolar en el Banco: {{currentBank}}</h5>
+                <h5>Dolar en el Banco: {{dolar.getType()}}</h5>
             </div>
             <div class="dolar-pricing">
                 <div class="last-update">

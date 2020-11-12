@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 
 import { News } from "../models/News";
+import { NewsService } from "../services/news.service";
 
 @Component({
   selector: 'app-news',
@@ -9,23 +9,16 @@ import { News } from "../models/News";
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
+  newsResponse : News[] = new Array();
 
-  news : News;
-  newsResponse : any[];
-
-  constructor(private http : HttpClient) { }
+  constructor(private newService : NewsService) { }
   
   ngOnInit(): void {
-    this.news = new News(this.http);
-    this.newsResponse = this.news.getLastestNews( this.getCurrentDate() );
-  }
-
-  private getCurrentDate() {
-    var date = new Date();
-    var d = date.getDay() + 1;
-    var m = date.getMonth() + 1;
-    var y = date.getFullYear();
-    return (y+"-"+m+"-"+d).toString;
+    this.newService.getNews().subscribe(response => {
+      response.articles.forEach(res => {
+        this.newsResponse.push(new News(res.title, res.publishedAt, res.url, res.author, res.urlToImage));
+      })
+    });
   }
 
 }

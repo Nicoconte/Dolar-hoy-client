@@ -1,78 +1,25 @@
 <div class="dolar-today-section">
     <div class="dolar-information">
 
-        <div class="dolar-values">
+        <div class="dolar-values" *ngFor="let dolar of responses">
+
             <div class="dolar-name">
-                <h5>Dolar Blue</h5>
+                <h5>{{ dolar.getType() }}</h5>
             </div>
             <div class="dolar-pricing">
                 <div class="last-update">
-                    <span> <i class="fa fa-clock-o"></i> Ultima actualizacion: {{ blue.getLastUpdate() }}</span>
+                    <span> <i class="fa fa-clock-o"></i> Ultima actualizacion: {{ dolar.getLastUpdate() }}</span>
                 </div>
                 <div class="buy">
-                    <span> <i class="fa fa-usd"></i> Compra: {{ blue.getPricingToBuy() }}</span>
+                    <span> <i class="fa fa-usd"></i> Compra: {{ dolar.getPricingToBuy() }}</span>
                 </div>
                 <div class="sell">
-                    <span> <i class="fa fa-usd"></i> Venta: {{ blue.getPricingToSell() }}</span>
+                    <span> <i class="fa fa-usd"></i> Venta: {{ dolar.getPricingToSell() }}</span>
                 </div>
-            </div>            
+            </div>    
+                    
         </div>
 
-        <div class="dolar-values">
-            <div class="dolar-name">
-                <h5>Dolar Oficial</h5>
-            </div>
-            <div class="dolar-pricing">
-                <div class="last-update">
-                    <span> <i class="fa fa-clock-o"></i> Ultima actualizacion: {{ official.getLastUpdate() }}</span>
-                </div>
-                <div class="buy">
-                    <span> <i class="fa fa-usd"></i> Compra: {{ official.getPricingToBuy() }}</span>
-                </div>
-                <div class="sell">
-                    <span> <i class="fa fa-usd"></i> Venta: {{ official.getPricingToSell() }}</span>
-                </div>               
-            </div>
-        </div>
-    </div>
-
-    <div class="dolar-information">
-        
-        <div class="dolar-values">
-            <div class="dolar-name">
-                <h5>Dolar Bolsa</h5>
-            </div>
-            <div class="dolar-pricing">
-                <div class="last-update">
-                    <span> <i class="fa fa-clock-o"></i> Ultima actualizacion: {{ bag.getLastUpdate() }}</span>
-                </div>
-                <div class="buy">
-                    <span> <i class="fa fa-usd"></i> Compra: {{ bag.getPricingToBuy() }}</span>
-                </div>
-                <div class="sell">
-                    <span> <i class="fa fa-usd"></i> Venta: {{ bag.getPricingToSell() }}</span>
-                </div>                
-            </div>
-        
-        </div>
-
-        <div class="dolar-values">
-            <div class="dolar-name">
-                <h5>Dolar con Liqui</h5>
-            </div>
-            <div class="dolar-pricing">
-                <div class="last-update">
-                    <span> <i class="fa fa-clock-o"></i> Ultima actualizacion: {{ withLiqui.getLastUpdate() }}</span>
-                </div>
-                <div class="buy">
-                    <span> <i class="fa fa-usd"></i> Compra: {{ withLiqui.getPricingToBuy() }}</span>
-                </div>
-                <div class="sell">
-                    <span> <i class="fa fa-usd"></i> Venta: {{ withLiqui.getPricingToSell() }}</span>
-                </div>               
-            </div>
-        </div>
-    
     </div>
 
 </div>

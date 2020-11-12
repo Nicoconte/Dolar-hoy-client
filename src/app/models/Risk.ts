@@ -1,12 +1,13 @@
-import { HttpClient } from "@angular/common/http";
-
 export class Risk {
-    private lastUpdate : any;
-    private riskPoint : any;
+    private lastUpdate : String;
+    private riskPoint : String;
 
-    private http : HttpClient;
+    constructor(lastUpdate : String, riskPoint : String) {
+        this.lastUpdate = lastUpdate;
+        this.riskPoint = riskPoint;
+    }
 
-    public setLastUpdate(update : any) {
+    public setLastUpdate(update : String) {
         this.lastUpdate = update;
     }
 
@@ -14,7 +15,7 @@ export class Risk {
         return this.lastUpdate;
     }
 
-    public setRiskPoint(points : any) {
+    public setRiskPoint(points : String) {
         this.riskPoint = points;
     }
 
@@ -22,14 +23,4 @@ export class Risk {
         return this.riskPoint;
     }
 
-    constructor(http : HttpClient) {
-        this.http = http;
-    }
-
-    public getCountryRisk() {
-        this.http.get<any>("/api/riesgopais").subscribe(res => {
-            this.riskPoint = res.valor;
-            this.lastUpdate = res.fecha;
-        })
-    }
 }

@@ -19,6 +19,7 @@ import { LoaderInterceptor } from "./interceptors/loader.interceptor";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CountryRiskComponent } from './country-risk/country-risk.component';
 import { NewsComponent } from './news/news.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { NewsComponent } from './news/news.component';
     LatNavbarComponent,
     DolarTodayComponent,
     BankComponent, 
-    LoaderComponent, PageNotFoundComponent, CountryRiskComponent, NewsComponent
+    LoaderComponent, PageNotFoundComponent, CountryRiskComponent, NewsComponent, FeedbackComponent
   ],
   imports: [
     BrowserModule,

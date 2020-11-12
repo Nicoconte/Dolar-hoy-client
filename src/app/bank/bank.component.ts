@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 import { FormGroup, FormControl } from "@angular/forms";
 
 import { Dolar } from "../models/Dolar";
+
+import { DolarTodayService } from "../services/dolar-today.service";
 
 @Component({
   selector: 'app-bank',
@@ -28,26 +29,23 @@ export class BankComponent implements OnInit {
     "Pampa"
   ];
 
-  currentBank : String;
-  selectMessage : String = null;
   dolar : Dolar;
+  selectMessage : String = "Seleccione un banco";
 
-  constructor(private http : HttpClient) { }
+  constructor(private dolarService : DolarTodayService) { }
 
   ngOnInit(): void {
-    this.dolar = new Dolar(this.http); //We must init the variable
+    this.dolar = new Dolar("No hay fecha", "No hay valor de compra", "No hay valor de venta", "No hay banco");
   }
 
-  // Forms
   bankForm = new FormGroup({
-    name : new FormControl(this.selectMessage)
+    name : new FormControl("Seleccione un banco")
   })
 
   //This method get the changes in the app
   onChange(event : any) {
-    this.currentBank = this.bankForm.value.name;
-    this.dolar = new Dolar(this.http);
-    this.dolar.getDolarInformationFrom(this.bankForm.value.name);
+    this.dolarService.getDolarFrom(this.bankForm.value.name).subscribe(res => {
+      this.dolar = new Dolar(res.fecha, res.venta, res.compra, this.bankForm.value.name);
+    });
   }
-
 }

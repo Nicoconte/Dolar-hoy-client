@@ -11,5 +11,12 @@
         "logLevel" : "debug",
         "changeOrigin" : true,
         "secure" : true
+    },
+    
+    "/api/v1/dolar": {
+        "target" : "https://localhost:8080",
+        "logLevel" : "debug",
+        "changeOrigin" : true,
+        "secure" : false 
     }
 }

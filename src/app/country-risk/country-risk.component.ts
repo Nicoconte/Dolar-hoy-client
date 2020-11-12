@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 
+import { RiskService } from "../services/risk.service";
 import { Risk } from "../models/Risk"; 
 
 @Component({
@@ -10,13 +10,17 @@ import { Risk } from "../models/Risk";
 })
 export class CountryRiskComponent implements OnInit {
 
-  constructor(private http : HttpClient) { }
+  constructor(private riskService : RiskService) { }
 
-  points : Risk;
+  risk : Risk = new Risk("", "");
 
   ngOnInit(): void {
-    this.points = new Risk(this.http);
-    this.points.getCountryRisk();
+    this.riskService.getRiskPoint().subscribe(res => {
+      if (res) {
+        this.risk.setLastUpdate(res.fecha)
+        this.risk.setRiskPoint(res.valor);
+      }
+    });
   }
 
 }

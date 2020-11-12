@@ -1,9 +1,8 @@
-// Modules
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 
-//Classes 
 import { Dolar } from "../models/Dolar";
+
+import { DolarTodayService } from "../services/dolar-today.service";
 
 @Component({
   selector: 'app-dolar-today',
@@ -11,28 +10,19 @@ import { Dolar } from "../models/Dolar";
   styleUrls: ['./dolar-today.component.css']
 })
 export class DolarTodayComponent implements OnInit {
+  typeOfDolars : String[] = ['Dolar Blue', 'Dolar Oficial', 'Dolar Bolsa', 'Contado Liqui'];
+  responses : Dolar[] = new Array();
 
-  blue : Dolar;
-  official : Dolar; 
-  bag : Dolar;
-  withLiqui : Dolar;
-
-  constructor(private http : HttpClient) { }
+  constructor(private dolarService : DolarTodayService) { }
 
   ngOnInit(): void {
-  
-    this.blue = new Dolar(this.http, "dolarblue");  
-    this.blue.getDolarInformation();
-
-    this.official = new Dolar(this.http, "dolaroficial");  
-    this.official.getDolarInformation();
-
-    this.bag = new Dolar(this.http, "dolarbolsa");  
-    this.bag.getDolarInformation();
-
-    this.withLiqui = new Dolar(this.http, "contadoliqui");  
-    this.withLiqui.getDolarInformation();
-    
+    this.typeOfDolars.forEach(req => {
+      this.dolarService.getDolarFrom(req.replace(" ","").toLowerCase()).subscribe(res => {
+        if (res) {
+          this.responses.push(new Dolar(res.fecha, res.venta, res.compra, req));
+        }
+      });
+    });
   }
   
 }

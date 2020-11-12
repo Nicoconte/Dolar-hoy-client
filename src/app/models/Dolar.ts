@@ -1,20 +1,25 @@
-import { HttpClient } from "@angular/common/http";
-
-
 export class Dolar{
     private type : String;
     private pricingToBuy : any;
     private pricingToSell : any;
     private lastUpdate : String;
 
-    private http : HttpClient;
-
-    constructor(http : HttpClient, type : String="") {
+    constructor(lastUpdate : String, pricingToSell : String,  pricingToBuy : String, type?: String) {
         this.type = type;
-        this.http = http;
+        this.pricingToBuy = pricingToBuy;
+        this.pricingToSell = pricingToSell;
+        this.lastUpdate = lastUpdate;
     }
 
-    public setPricingToBuy(pricing : number) {
+    public setType(type : String) {
+        this.type = type;
+    }
+
+    public getType() {
+        return this.type;
+    }
+
+    public setPricingToBuy(pricing : String) {
         this.pricingToBuy = pricing;
     }
 
@@ -22,7 +27,7 @@ export class Dolar{
         return this.pricingToBuy;
     }
 
-    public setPricingToSell(pricing : number) {
+    public setPricingToSell(pricing : String) {
         this.pricingToSell = pricing;
     }
 
@@ -36,25 +41,5 @@ export class Dolar{
     
     public getLastUpdate() {
         return this.lastUpdate;
-    }
-
-    /**
-     * getDolarInformation: Obtain the different dollar values 
-     */
-    public getDolarInformation() {
-
-        this.http.get<any>("/api/" + this.type).subscribe(res => {
-            this.pricingToBuy = res.compra;
-            this.pricingToSell = res.venta;
-            this.lastUpdate = res.fecha;
-        });
-    }
-
-    public getDolarInformationFrom(bank : String) {
-        this.http.get<any>("/api/" + bank).subscribe(res => {
-            this.pricingToBuy = res.compra;
-            this.pricingToSell = res.venta;
-            this.lastUpdate = res.fecha;
-        });
     }
 }
