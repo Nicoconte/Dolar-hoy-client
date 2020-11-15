@@ -40,18 +40,23 @@ Hechas:
 
 /*------------------------------------*/
 
-11/11/2020
+11/11/2020 -> No se hizo nada. Admin ocupado
+
+/*------------------------------------*/
+
+12/11/2020
 
 tareas:
 [] Validar los botones de calificacion
 [] Verificar los estilos de los botones de calificacion al presionarse
-[] Crear Api para feedback con Java y Jersey
 [] Montar la Api feedback en un servidor
-[] Ver sobre "Service"
 [] Mostrar y ocultar el navbar lateral con el boton hamburguesa
 [] Crear vista "About"
 [] Ver de colocar un grafico historico en el componente "riesgo pais"
 
 Hechas:
+[ x ] Crear Api para feedback con Java y Jersey
+[ x ] Ver sobre "Service"
+
 
 /*------------------------------------*/

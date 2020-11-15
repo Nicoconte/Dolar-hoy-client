@@ -21,7 +21,6 @@ import { CountryRiskComponent } from './country-risk/country-risk.component';
 import { NewsComponent } from './news/news.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -14,7 +14,6 @@
     width:82%;
     height:100%;
     background-color: #fff3e2;
-    animation: 1s linear;
 }
 
 /* Access to css child component */
@@ -23,33 +22,13 @@
     height:10%;
 }
 
-:host ::ng-deep .dolar-today-section, .bank-section {
-    width:100%;
-    height: 100%;
-}
-
-:host ::ng-deep .bank-section {
-    width:100%;
-    height: 100%;
-}
-
-:host ::ng-deep .page-not-found-section {
-    width: 100%;
-    height: 100%;
-}
-
-:host ::ng-deep .country-risk-section {
-    width: 100%;
-    height: 100%;
-}
-
-:host ::ng-deep .news-section {
-    width: 100%;
-    height: 100%;
-}
-
+:host ::ng-deep .dolar-today-section, 
+:host ::ng-deep .bank-section,
+:host ::ng-deep .page-not-found-section,
+:host ::ng-deep .country-risk-section,
+:host ::ng-deep .news-section,
 :host ::ng-deep .feedback-section {
-    width: 100%;
+    width:100%;
     height: 100%;
 }
 
