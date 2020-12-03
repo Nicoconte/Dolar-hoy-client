@@ -1,0 +1,25 @@
+<div class="dolar-today-section">
+    <div class="dolar-information">
+
+        <div class="dolar-values" *ngFor="let dolar of responses">
+
+            <div class="dolar-name">
+                <h5>{{ dolar.getType() }}</h5>
+            </div>
+            <div class="dolar-pricing">
+                <div class="last-update">
+                    <span> <i class="fa fa-clock-o"></i> Ultima actualizacion: {{ dolar.getLastUpdate() }}</span>
+                </div>
+                <div class="buy">
+                    <span> <i class="fa fa-usd"></i> Compra: {{ dolar.getPricingToBuy() }}</span>
+                </div>
+                <div class="sell">
+                    <span> <i class="fa fa-usd"></i> Venta: {{ dolar.getPricingToSell() }}</span>
+                </div>
+            </div>    
+                    
+        </div>
+
+    </div>
+
+</div>

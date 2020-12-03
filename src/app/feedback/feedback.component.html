@@ -1,0 +1,36 @@
+<div class="feedback-section">
+    <div class="feedback-title">
+        <div class="title">
+            <h3> <i class="fa fa-hand-o-right"></i> <i class="fa fa-envelope-o ml-2"></i> Deja tu feedback </h3>
+        </div>
+    </div>
+    <div class="feedback-form">
+        <form [formGroup]="feedBackForm"> 
+            <div class="numeric-form">
+                <div class="numeric-question">
+                    <span><i class="fa fa-pencil-square-o"></i> Basado en tu experiencia, como calificarias la app (Opcional):</span>
+                </div>
+                <div class="numeric-buttons">
+                    <div class="numeric-box" *ngFor="let num of califications">
+                        <button (click)="changeButtonStyle(num)" class="btn" [id]=num> {{num}} </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-form">
+                <div class="text-message">
+                    <span><i class="fa fa-pencil-square-o"></i> Deja un mensaje con tu feedback:</span>
+                </div>
+                <div class="text-area">
+                    <textarea formControlName="comment" class="form-control" cols="30" rows="6" placeholder="Deje su comentario"></textarea>
+                    <div class="alert alert-danger mt-1" *ngIf="feedBackForm.get('comment').errors && feedBackForm.get('comment').hasError('minlength')">
+                        <span>El comentario debe tener mas de 5 caracteres</span>
+                    </div>
+                    <div class="alert alert-danger mt-1" *ngIf="feedBackForm.get('comment').errors && feedBackForm.get('comment').hasError('required')">
+                        <span>El comentario es obligatorio!</span>
+                    </div>
+                </div>
+                <button (click)="sendFeedBack()" class="btn">Enviar feedback</button>
+            </div>
+        </form>
+    </div>
+</div>
