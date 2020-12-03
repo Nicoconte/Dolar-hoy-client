@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "/api/" : {
         "target" : "https://api-dolar-argentina.herokuapp.com",
@@ -19,4 +20,27 @@
         "changeOrigin" : true,
         "secure" : false 
     }
+=======
+{
+    "/api/" : {
+        "target" : "https://api-dolar-argentina.herokuapp.com",
+        "logLevel" : "debug",
+        "changeOrigin" : true,
+        "secure" : true 
+    },
+
+    "/v2/" : {
+        "target" : "http://newsapi.org",
+        "logLevel" : "debug",
+        "changeOrigin" : true,
+        "secure" : true
+    },
+    
+    "/api/v1/dolar": {
+        "target" : "https://localhost:8080",
+        "logLevel" : "debug",
+        "changeOrigin" : true,
+        "secure" : false 
+    }
+>>>>>>> 9884f4cfe3e4d0869ba906ec62ef5724c510175f
 }

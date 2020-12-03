@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .sup-nav-section{
     display: flex;
     flex-direction: row;
@@ -31,4 +32,39 @@
 
 .sup-nav-burguer h4, i{
     font-weight: 800;
+=======
+.sup-nav-section{
+    display: flex;
+    flex-direction: row;
+    background-color: #706897;
+}
+
+.sup-nav-notification, .sup-nav-burguer{
+    width:50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+
+.sup-nav-notification{
+    justify-content: flex-end;
+}
+
+.sup-nav-notification button{
+    margin-right:40px;
+    background-color: #16a596;
+}
+
+.sup-nav-burguer {
+    justify-content: flex-start;
+}
+
+.sup-nav-burguer button{
+    margin-left:20px;
+    background-color: #16a596;
+}
+
+.sup-nav-burguer h4, i{
+    font-weight: 800;
+>>>>>>> 9884f4cfe3e4d0869ba906ec62ef5724c510175f
 }
