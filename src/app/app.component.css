@@ -22,6 +22,7 @@
     height:10%;
 }
 
+
 :host ::ng-deep .dolar-today-section, 
 :host ::ng-deep .bank-section,
 :host ::ng-deep .page-not-found-section,
