@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {
     "/api/" : {
         "target" : "https://api-dolar-argentina.herokuapp.com",
@@ -20,7 +20,7 @@
         "changeOrigin" : true,
         "secure" : false 
     }
-=======
+
 {
     "/api/" : {
         "target" : "https://api-dolar-argentina.herokuapp.com",
@@ -42,5 +42,5 @@
         "changeOrigin" : true,
         "secure" : false 
     }
->>>>>>> 9884f4cfe3e4d0869ba906ec62ef5724c510175f
+
 }
